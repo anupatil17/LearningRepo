@@ -10,6 +10,9 @@ public class TestStack {
         s.push(20);
         s.push(30);
         s.push(40);
+        s.push(80);
+        s.push(54);
+        s.push(36);
         
         s.display();
 
