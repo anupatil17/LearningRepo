@@ -1,18 +1,15 @@
 package com.mmcoe.stock;
 
+public final class StockSingleton {
+	private StockSingleton() {
+	}
 
-public class StockSingleton {
-
-    
-	 private static Exchange stock;
-
-	    private StockSingleton() {
-	    }
-
-	    public static Exchange getStock() {
-	        if (stock == null) {
-	            stock = new ();
-	        }
-	        return stock;
-	    }
+	private static Stock stk;
+	
+	public static Stock getStock() {
+		if(stk == null)
+			stk = new Stock();
+		
+		return stk;
+	}
 }

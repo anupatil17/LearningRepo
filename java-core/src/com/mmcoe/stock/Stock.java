@@ -1,20 +1,20 @@
 package com.mmcoe.stock;
 
+public class Stock implements Exchange {
 
-public class Stock {
-    private String stockName;
-    private double price;
-    public Stock() {}
-    public Stock(String stockName, double price) {
-        this.stockName = stockName;
-        this.price = price;
-    }
+	@Override
+	public void getQuote() {
+		System.out.println("Get Quote");
+	}
 
-    public String getStockName() {
-        return stockName;
-    }
+	@Override
+	public void viewQuote() {
+		System.out.println("View Quote");
+	}
 
-    public double getPrice() {
-        return price;
-    }
+	@Override
+	public void setQuote() {
+		System.out.println("Set Quote");
+	}
+
 }

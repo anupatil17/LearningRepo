@@ -1,20 +1,23 @@
-package com.mmcoe.stock;
+import com.mmcoe.stock.Broker;
+import com.mmcoe.stock.Exchange;
+import com.mmcoe.stock.Holder;
+import com.mmcoe.stock.StockSingleton;
 
 public class TestStock {
+
 	public static void main(String[] args) {
-		Holder h=StockSingleton.getStock();
-		h.display();
+		Stock tisco = new Stock();
 		
-		Broker b=StockSingleton.getStock();
-		b.display();
+		Holder h = StockSingleton.getStock();
+		h.viewQuote();
 		
-		Exchange e=StockSingleton.getStock();
-		e.display();
+		Broker b = StockSingleton.getStock();
+		b.getQuote();
 		
-		System.out.println(h==b);
-		System.out.println(b==h);
+		Exchange x = StockSingleton.getStock();
+		x.setQuote();
 		
-		
-		
+		System.out.println(h == b);
+		System.out.println(b == x);
 	}
 }
